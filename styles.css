@@ -1,220 +1,95 @@
-*{ 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: consolas;
-
-}
-
-section{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: rgb(53, 39, 39);
-    display: flex;
-    justify-content: center;
-    align-items: top;
-}
-
-section::before{
-    content: '';
-    position: absolute;
-    top: 10%;
-    right: 20%;
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    background: linear-gradient(rgb(31, 31, 235),rgb(252, 56, 56)); 
-    animation: animate 5s ease-in-out infinite;
-}
-
-section::after{
-    content: '';
-    position: absolute;
-    bottom: 10%;
-    left: 20%;
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    background: linear-gradient(rgb(54, 235, 38),rgb(157, 30, 207)); 
-    animation: animate 5s ease-in-out infinite;
-    animation-delay: 2.5s;
-}
-
-@keyframes animate
-{
-    0%,100%
-    {
-        transform: translateY(20px);
-    }
-    50%
-    {
-        transform: translateY(-20px);
-    }
-}
-
-.reloj{
-    position: relative;
-    width: 700px;
-    height: 250px;
-    background: rgb(71, 60, 60, 0.05);
-    box-shadow: 0 15px 25px rgba(245, 90, 90, 0.2);
-    z-index: 1000;
-    margin-top: 1%;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-}
-
-.reloj .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.reloj .container h2{
-    font-size: 6em;
-    color:white;
-}
-
-.reloj .container h2:nth-child(odd){
-    padding: 5px 15px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 15px 35px rgb(255, 255, 255, 0.1);
-    margin: 0 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.reloj .container h2#segundo{
-    color:rgb(207, 184, 50);
-}
-
-#am-pm{
-    position: relative;
-    top: -50px;
-    font-size: 2em;
-    color:rgb(252, 252, 252);
-    font-weight: 700;
-}
-
-
-
-
-
 .modal-window {
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.25);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s;
+	 position: fixed;
+	 background-color: rgba(255, 255, 255, 0.25);
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 999;
+	 visibility: hidden;
+	 opacity: 0;
+	 pointer-events: none;
+	 transition: all 0.3s;
 }
-.modal-window:target {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
+ .modal-window:target {
+	 visibility: visible;
+	 opacity: 1;
+	 pointer-events: auto;
 }
-.modal-window > div {
-    width: 800px;
-    height: 400px;
-    position: absolute;
-    top: 55%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    padding: 1em;
-    background: white;
+ .modal-window > div {
+	 width: 400px;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 padding: 2em;
+	 background: white;
 }
-.modal-window header {
-    font-weight: bold;
+ .modal-window header {
+	 font-weight: bold;
 }
-.modal-window h1 {
-    font-size: 150%;
-    margin: 0 0 15px;
+ .modal-window h1 {
+	 font-size: 150%;
+	 margin: 0 0 15px;
 }
-.modal-close {
-    color: #aaa;
-    line-height: 50px;
-    font-size: 80%;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    width: 70px;
-    text-decoration: none;
+ .modal-close {
+	 color: #aaa;
+	 line-height: 50px;
+	 font-size: 80%;
+	 position: absolute;
+	 right: 0;
+	 text-align: center;
+	 top: 0;
+	 width: 70px;
+	 text-decoration: none;
 }
-.modal-close:hover {
-    color: black;
+ .modal-close:hover {
+	 color: black;
 }
 /* Demo Styles */
-html, body {
-    height: 100%;
+ html, body {
+	 height: 100%;
 }
-html {
-    font-size: 18px;
-    line-height: 1.4;
+ html {
+	 font-size: 18px;
+	 line-height: 1.4;
 }
-body {
-    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    font-weight: 600;
-    background-image: linear-gradient(to right, #7f53ac 0, #657ced 100%);
-    color: black;
+ body {
+	 font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	 font-weight: 600;
+	 background-image: linear-gradient(to right, #7f53ac 0, #657ced 100%);
+	 color: black;
 }
-a {
-    color: inherit;
-    text-decoration: none;
+ a {
+	 color: inherit;
+	 text-decoration: none;
 }
-.container2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+ .container {
+	 display: grid;
+	 justify-content: center;
+	 align-items: center;
+	 height: 100vh;
 }
-.modal-window > div {
-    border-radius: 1rem;
+ .modal-window > div {
+	 border-radius: 1rem;
 }
-.modal-window div:not(:last-of-type) {
-    margin-bottom: 15px;
+ .modal-window div:not(:last-of-type) {
+	 margin-bottom: 15px;
 }
-.logo {
-    max-width: 150px;
-    display: block;
+ .logo {
+	 max-width: 150px;
+	 display: block;
 }
-small {
-    color: lightgray;
+ small {
+	 color: lightgray;
 }
-.btn {
-    background-color: white;
-    padding: 1em 1.5em;
-    border-radius: 0.5rem;
-    text-decoration: none;
+ .btn {
+	 background-color: orange;
+	 padding: 1em 1.5em;
+	 border-radius: 0.5rem;
+	 text-decoration: none;
 }
-.btn i {
-    padding-right: 0.3em;
+ .btn i {
+	 padding-right: 0.3em;
 }
-
-input{
-    width: 11%;
-    font-size: medium;
-}
-
-.btn2{
-   width: 30%;
-   font-size: medium;
-   background-color: white;
-   padding: 1em;
-   cursor: pointer;
-   border-radius: 0.5rem;
-   text-decoration: none;
-}
-
-.btn2:hover{
-    background-color: orange;
-}
+ 
